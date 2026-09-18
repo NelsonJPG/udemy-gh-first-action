@@ -9,14 +9,15 @@ on: push
 #       - 'features/**'
 jobs:
   testing:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Get Hash Git
-      uses: actions/checkout@v7
+        uses: actions/checkout@v7
       - name: Get Node Setup
-      uses: actions/setup-node@v7
-      with:
-        node-version: 24
-      run: npm ci
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Install Dependencies
+        run: npm ci
       - name: Testing App
-      run: npm test
+        run: npm test
