@@ -10,4 +10,3 @@ jobs:
           echo "second line - multiline"
       - name: Say Goodbye
         run: echo "Bye Bye everyone" 
-      
