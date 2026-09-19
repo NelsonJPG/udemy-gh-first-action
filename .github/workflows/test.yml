@@ -1,5 +1,5 @@
 name: Test Project
-on: push
+on: [ push, workflow_dispatch ] # you can set up a trigger with different events
 # you can set up a trigger with different branches
 # on:
 #   push:
