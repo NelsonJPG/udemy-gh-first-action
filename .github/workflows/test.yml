@@ -21,3 +21,20 @@ jobs:
         run: npm ci
       - name: Testing App
         run: npm test
+  deploying:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Hash Git
+        uses: actions/checkout@v7
+      - name: Get Node Setup
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build App
+        run: npm run build
+      - name: Deploy App
+        run: echo "Deploying the app..." # imagine that you upload the build folder to a server or cloud service 
+
+    
