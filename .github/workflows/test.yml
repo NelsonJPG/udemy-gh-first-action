@@ -22,6 +22,7 @@ jobs:
       - name: Testing App
         run: npm test
   deploying:
+    needs: testing # We can set multiple jobs [jobs1, jobs2, jobsN]
     runs-on: ubuntu-latest
     steps:
       - name: Get Hash Git
